@@ -28,7 +28,7 @@ function formSubmit(e){
           'Content-type': 'application/json'
         },
         body: JSON.stringify( {
-          formObject: "formObject"
+          formObject: formObject
         }),
       });
 }
