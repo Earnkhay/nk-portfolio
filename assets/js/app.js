@@ -31,5 +31,12 @@ function formSubmit(e){
           formObject: formObject
         }),
       });
-      window.location.reload();
+
+      name.value = "";
+      phone.value = "";
+      email.value = "";
+      subject.value = "";
+      message.value = "";
+
+    //   window.location.reload();
 }
