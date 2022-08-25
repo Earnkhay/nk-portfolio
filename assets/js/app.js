@@ -12,7 +12,7 @@ function formSubmit(e){
     let subject = document.getElementById('subject');
     let message = document.getElementById('contact-message');
 
-    const formObject = {
+    const formObjects = {
         name: name.value,
         phone: phone.value,
         email: email.value,
@@ -28,15 +28,19 @@ function formSubmit(e){
           'Content-type': 'application/json'
         },
         body: JSON.stringify( {
-          formObject: formObject
+          formObjects: formObjects
         }),
       });
 
-      name.value = "";
-      phone.value = "";
-      email.value = "";
-      subject.value = "";
-      message.value = "";
+    //   name.value = "";
+    //   phone.value = "";
+    //   email.value = "";
+    //   subject.value = "";
+    //   message.value = "";
 
-    //   window.location.reload();
+    //   formObjects.forEach(formObject => {
+    //     formObject = '';
+    //   });
+
+    form.reset();
 }
