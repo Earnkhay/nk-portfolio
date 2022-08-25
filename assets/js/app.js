@@ -31,4 +31,5 @@ function formSubmit(e){
           formObject: formObject
         }),
       });
+      window.location.reload();
 }
