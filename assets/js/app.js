@@ -1,7 +1,9 @@
-const form = document.getElementById('contact-form')
+const formButton = document.getElementById('submit'),
+      form =document.getElementById('contact-form'),
+      alert = document.getElementById('alert')
 
-form.addEventListener('submit', formSubmit);
-
+formButton.addEventListener('click', formSubmit);
+alert.style.display = 'none';
 
 function formSubmit(e){
     e.preventDefault();
@@ -11,6 +13,7 @@ function formSubmit(e){
     let email = document.getElementById('contact-email');
     let subject = document.getElementById('subject');
     let message = document.getElementById('contact-message');
+    let emailValidation = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
 
     const formObjects = {
         name: name.value,
@@ -20,17 +23,36 @@ function formSubmit(e){
         message: message.value
     }
 
-    //fetch request
-    fetch('https://vue-http-learning-b7e81-default-rtdb.firebaseio.com/portfolio.json', {
-        method: 'POST',
-        headers: {
-          //tells server we'll add data to the request which would be in json format
-          'Content-type': 'application/json'
-        },
-        body: JSON.stringify( {
-          formObjects: formObjects
-        }),
-      });
+    if (name.value != '' && email.value != "" && subject.value != '' && message.value != "" && emailValidation.test(email.value)) {
+        //fetch request
+        fetch('https://vue-http-learning-b7e81-default-rtdb.firebaseio.com/portfolio.json', {
+            method: 'POST',
+            headers: {
+            //tells server we'll add data to the request which would be in json format
+            'Content-type': 'application/json'
+            },
+            body: JSON.stringify( {
+            formObjects: formObjects
+            }),
+        });
+        console.log('submit');
+        alert.textContent = 'Successful, thanks for reaching out'
+        alert.style.display = 'block';
+        setTimeout(
+            () => {
+                alert.style.display = 'none'
+            }, 3000); 
+    } else {
+        alert.textContent = 'Please enter valid response(s)'
+        alert.style.display = 'block';
+        setTimeout(
+            () => {
+                alert.style.display = 'none'
+            }, 3000);     
+    }
+
+    console.log('random');
+    
 
     //   name.value = "";
     //   phone.value = "";
@@ -38,9 +60,14 @@ function formSubmit(e){
     //   subject.value = "";
     //   message.value = "";
 
-    //   formObjects.forEach(formObject => {
-    //     formObject = '';
-    //   });
-
-    form.reset();
+    // setTimeout(
+    //     () => {
+    //         window.location.reload();
+    //     }, 4000);  
+    
+    setTimeout(
+        () => {
+            form.reset();
+        }, 3000);   
+    
 }

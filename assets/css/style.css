@@ -7387,7 +7387,7 @@ Custom Row
     Input Placeholder
 =============================*/
 input:-moz-placeholder,
-textarea:-moz-placeholder {
+/* textarea:-moz-placeholder {
   opacity: 1;
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
 }
@@ -7408,7 +7408,7 @@ input:-ms-input-placeholder,
 textarea:-ms-input-placeholder {
   opacity: 1;
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
-}
+} */
 
 /*=============================
 	Overlay styles 
@@ -19701,3 +19701,8 @@ body.white-version .popup-mobile-menu .primary-menu .has-droupdown .submenu {
   color: var(--color-white) !important;
 }
 /*# sourceMappingURL=../maps/style.css.map */
+
+
+#alert{
+  font-size: 1.8rem;
+}
