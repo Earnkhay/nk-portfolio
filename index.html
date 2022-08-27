@@ -945,7 +945,99 @@
         </div>
         <!-- End portfolio Area -->
 
-       
+        <div class="rn-contact-area rn-section-gap section-separator" id="contacts">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="section-title text-center">
+                            <span class="subtitle">Contact</span>
+                            <h2 class="title">Connect With Me</h2>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row mt--50 mt_md--40 mt_sm--40 mt-contact-sm">
+                    <div class="col-lg-5">
+                        <div class="contact-about-area">
+                            <div class="thumbnail">
+                                <img src="assets/images/contact/contact1.png" alt="contact-img">
+                            </div>
+                            <div class="title-area">
+                                <h4 class="title">Nkechi Julia Onyimadu</h4>
+                                <span>Frontend Web Developer</span>
+                            </div>
+                            <div class="description">
+                                <p>I am available for Jobs. Connect with me via email and call.
+                                </p>
+                                <span class="phone">Phone: <a href="tel:08154815001">+2348154815001</a></span>
+                                <span class="mail">Email: <a href="mailto:nkechionyimadu@gmail.com">nkechionyimadu@gmail.com</a></span>
+                            </div>
+                            <div class="social-area">
+                                <div class="name">CONNECT WITH ME</div>
+                                <div class="social-icone">
+                                    <a target="_blank" href="https://www.linkedin.com/in/nkechi-onyimadu/"><i data-feather="linkedin"></i></a>
+                                    <a target="_blank" href="https://github.com/Earnkhay"><i data-feather="github"></i></a>
+                                    <a target="_blank" href="https://twitter.com/earnkayjules"><i data-feather="twitter"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div data-aos-delay="600" class="col-lg-7 contact-input">
+                        <div class="contact-form-wrapper">
+                            <div class="introduce">
+
+                                <form class="rnt-contact-form rwt-dynamic-form row" id="contact-form" method="POST" action="https://vue-http-learning-b7e81-default-rtdb.firebaseio.com/portfolio.json">
+                                    <div class="col-lg-6">
+                                        <div class="form-group">
+                                            <label for="contact-name">Your Name</label>
+                                            <input class="form-control form-control-lg" name="contact-name" id="contact-name" type="text" >
+                                        </div>
+                                        
+                                    </div>
+
+                                    <div class="col-lg-6">
+                                        <div class="form-group">
+                                            <label for="contact-phone">Phone Number</label>
+                                            <input class="form-control" name="contact-phone" id="contact-phone" type="text" >
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-12">
+                                        <div class="form-group">
+                                            <label for="contact-email">Email</label>
+                                            <input class="form-control form-control-sm" id="contact-email" name="contact-email" type="email" >
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-12">
+                                        <div class="form-group">
+                                            <label for="subject">subject</label>
+                                            <input class="form-control form-control-sm" id="subject" name="subject" type="text" >
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-12">
+                                        <div class="form-group">
+                                            <label for="contact-message">Your Message</label>
+                                            <textarea name="contact-message" id="contact-message" cols="30" rows="10" placeholder="Please leave a message...." ></textarea>
+                                        </div>
+                                    </div>
+
+                                    <p id="alert"></p>            
+                                    <div class="col-lg-12">
+                                        <button name="submit" type="submit" id="submit" class="rn-btn">
+                                            <span>SEND MESSAGE</span>
+                                            <i data-feather="arrow-right"></i>
+                                        </button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <!-- Modal Portfolio Body area Start -->
         <div class="modal fade" id="portfolioModal" tabindex="-1" role="dialog" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered" role="document">
@@ -1187,10 +1279,8 @@
                                         </div>
                                     </div>
                                 </div>
-                                <!-- End of .text-content -->
                             </div>
                         </div>
-                        <!-- End of .row Body-->
                     </div>
                 </div>
             </div>
