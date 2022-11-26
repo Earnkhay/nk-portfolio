@@ -39,16 +39,16 @@ function formSubmit(e){
             body: JSON.stringify( {
             formObjects: formObjects
             }),
-        }).then(res => {
-              console.log(res);
+        }).then(() => {
+            //   console.log(res);
                 alert.textContent = 'Successful, thanks for reaching out'
                 alert.style.display = 'block';
                 setTimeout(
                     () => {
                         alert.style.display = 'none'
                 }, 3000); 
-          }).catch((error) => {
-            console.log(error);
+          }).catch(() => {
+            // console.log(error);
             alert.textContent = 'Could not save data - please try again later'
             alert.style.display = 'block';
             setTimeout(
@@ -72,7 +72,7 @@ function formSubmit(e){
             }, 3000);     
     }
 
-    console.log('not working...........');
+    // console.log('not working...........');
     
 
     //   name.value = "";
@@ -119,16 +119,16 @@ function ContactFormSubmit(e){
             body: JSON.stringify( {
             formObjects: formObjects
             }),
-        }).then(res => {
-              console.log(res);
+        }).then(() => {
+            //   console.log(res);
                 alertPrompt.textContent = 'Successful, thanks for reaching out'
                 alertPrompt.style.display = 'block';
                 setTimeout(
                     () => {
                         alertPrompt.style.display = 'none'
                 }, 3000); 
-          }).catch((error) => {
-            console.log(error);
+          }).catch(() => {
+            // console.log(error);
             alertPrompt.textContent = 'Could not save data - please try again later'
             alertPrompt.style.display = 'block';
             setTimeout(
@@ -152,7 +152,7 @@ function ContactFormSubmit(e){
             }, 3000);     
     }
 
-    console.log('contact form section'); 
+    // console.log('contact form section'); 
     
     setTimeout(
         () => {
